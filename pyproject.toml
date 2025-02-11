@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = "Backend for Juma IoT management"
+authors = ["rayhankimi <r4yhankimi@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.6"
+motor = {extras = ["srv"], version = "^3.6.1"}
+uvicorn = {extras = ["standard"], version = "^0.34.0"}
+pydantic = {extras = ["email"], version = "^2.10.5"}
+firebase-admin = "^6.3.0"
+paho-mqtt = "^2.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-asyncio = "^0.25.2"
+httpx = "^0.28.1"
+mongomock = "^4.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
